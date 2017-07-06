@@ -1,0 +1,53 @@
+{
+  "result": 0,
+  "data": [
+    {
+      "id":"driver_order",
+      "name":"试乘试驾",
+      "url":"/orderDrive",
+      "icon":"../../static/imgs/icon/driver_order.png"
+    },
+    {
+      "id":"dial_changan",
+      "name":"一键长安",
+      "url":"",
+      "icon":"../../static/imgs/icon/dial_changan.png"
+    },
+    {
+      "id":"ca_mall",
+      "name":"长安商城",
+      "url":"http://120.76.100.239/caecapptest/main/index.html",
+      "icon":"../../static/imgs/icon/ca_mall.png"
+    },
+    {
+      "id":"4s_info",
+      "name":"经销商",
+      "url":"/dealer",
+      "icon":"../../static/imgs/icon/4s_info.png"
+    },
+    {
+      "id":"custom_evaluate",
+      "name":"客户点评",
+      "url":"/customEvaluate",
+      "icon":"../../static/imgs/icon/custom_evaluate.png"
+    },
+    {
+      "id":"dial_rescue",
+      "name":"道路救援",
+      "url":"",
+      "icon":"../../static/imgs/icon/dial_rescue.png"
+    },
+    {
+      "id":"car_parts",
+      "name":"原厂配件",
+      "url":"/parts",
+      "icon":"../../static/imgs/icon/car_parts.png"
+    },
+    {
+      "id":"recommend_car",
+      "name":"推荐购车",
+      "url":"/recommend",
+      "icon":"../../static/imgs/icon/recommend_car.png"
+    }
+  ]
+}
