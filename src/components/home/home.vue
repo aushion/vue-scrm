@@ -19,8 +19,10 @@
             </router-link>
           </li>
           <li class="apply-item">
+            <router-link to="/appManage">
             <div class="apply-icon"><img src="../home/imgs/more.png" ></div>
             更多
+            </router-link>
           </li>
         </ul>
       </div>
@@ -38,9 +40,7 @@
           src="../home/imgs/club_wiki_expert.png"></div>
         <div class="comm-link comm-up" data-value="club_wiki_fan"><img src="../home/imgs/club_wiki_fan.png">
         </div>
-
       </div>
-
     </div>
     <div class="home-footer">
       <v-footer></v-footer>

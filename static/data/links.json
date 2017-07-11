@@ -1,0 +1,204 @@
+{
+  "result": 0,
+  "data": [
+    {
+      "id": "apps",
+      "name": "系统链接（发现应用）",
+      "data": [
+        {
+          "id": "1",
+          "name": "长安亲情服务",
+          "desc": "长安亲情服务APP旨在为长安商用车客户随时随地提供“三包服务、主动维修、增值服务”等贴心服务。",
+          "icon": "http://scrmtest.changan.com.cn/scrm-app-web/static/data/app/qinqingfuwu.jpg",
+          "url": {
+            "ios": "https://itunes.apple.com/app/zhang-guan-fang-chu-pin-zhang/id980521920",
+            "andriod": "http://www.wandoujia.com/apps/cn.com.changan.changancv"
+          }
+        },
+        {
+          "id": "2",
+          "name": "长安商城",
+          "desc": "长安商城——长安汽车旗下电商平台。买车用车，上长安商城！",
+          "icon": "http://scrmtest.changan.com.cn/scrm-app-web/static/data/app/mall.jpg",
+          "url": {
+            "ios": "https://itunes.apple.com/us/app/zhang-an-qi-che-shang-cheng/id1118800840",
+            "andriod": "http://www.wandoujia.com/apps/cn.com.changan.caecapp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "club",
+      "name": "系统链接（官网社区）",
+      "data": [
+        {
+          "id":"club_home",
+          "name":"车友论坛",
+          "url":"http://changanclub.cigtest.com.cn/app/portal.php"
+        },
+        {
+          "id":"club_activity",
+          "name":"热门活动",
+          "url":"http://changanclub.cigtest.com.cn/app/plugin.php?id=dpw_activity:activity"
+        },
+        {
+          "id":"club_area",
+          "name":"热门版区",
+          "url":"http://changanclub.cigtest.com.cn/app/plugin.php?id=channel&act=riders"
+        },
+        {
+          "id":"club_wiki_expert",
+          "name":"专家课堂",
+          "url":"http://changanclub.cigtest.com.cn/app/plugin.php?id=channel&act=baik&op=list"
+        },
+        {
+          "id":"club_wiki_fan",
+          "name":"车友锦囊",
+          "url":"http://changanclub.cigtest.com.cn/app/forum.php?mod=forumdisplay&fid=202&typeid=8"
+        },
+        {
+          "id":"club_my_posting",
+          "name":"我的帖子",
+          "url":"http://changanclub.cigtest.com.cn/app/home.php?mod=space&do=thread&view=me&type=reply"
+        },
+        {
+          "id":"club_my_activity",
+          "name":"我的活动",
+          "url":"http://changanclub.cigtest.com.cn/app/home.php?mod=space&do=poll&view=me"
+        },
+        {
+          "id":"club_my_msg",
+          "name":"我的消息",
+          "url":"http://changanclub.cigtest.com.cn/app/home.php?mod=space&do=notice&view=mypost"
+        },
+        {
+          "id":"club_my_friend",
+          "name":"我的好友",
+          "url":"http://changanclub.cigtest.com.cn/app/home.php?mod=space&do=friend"
+        },
+        {
+          "id":"club_sign",
+          "name":"签到",
+          "url":"main/sign.html"
+        },
+        {
+          "id":"club_new_activity",
+          "name":"三团一盛典活动",
+          "url":"http://e.changan.com.cn/cafan/Home"
+        }
+      ]
+    },
+    {
+      "id": "buttons",
+      "name": "系统链接（用户自定义快捷功能）",
+      "data": [
+        {
+          "id": "driver_order",
+          "name": "试乘试驾",
+          "url": "dealer/driver-order.html"
+        },
+        {
+          "id": "dial_changan",
+          "name": "一键长安",
+          "url": ""
+        },
+        {
+          "id": "ca_mall",
+          "name": "长安商城",
+          "url": "http://cloud.mall.changan.com.cn/caecapptest/main/index.html?biz=9"
+        },
+        {
+          "id": "4s_info",
+          "name": "经销商",
+          "url": "dealer/index.html"
+        },
+        {
+          "id": "user_feedback",
+          "name": "意见反馈",
+          "url": "my/feedback.html"
+        },
+        {
+          "id": "custom_evaluate",
+          "name": "客户点评",
+          "url": "customEvaluate/index.html"
+        },
+        {
+          "id": "dial_rescue",
+          "name": "道路救援",
+          "url": ""
+        },
+        {
+          "id": "car_parts",
+          "name": "原厂配件",
+          "url": "server/accessories.html"
+        },
+        {
+          "id": "recommend_car",
+          "name": "推荐购车",
+          "url": "legalize/recommend-share.html"
+        },
+        {
+          "id": "ca_yundian",
+          "name": "长安云店",
+          "url": "http://e.changan.com.cn/yundian/index_wap.html"
+        }
+      ]
+    },
+    {
+      "id": "links",
+      "name": "系统链接（常用链接）",
+      "data": [
+        {
+          "id": "driver_order",
+          "name": "试乘试驾",
+          "url": "dealer/driver-order.html"
+        },
+        {
+          "id": "dial_changan",
+          "name": "一键长安",
+          "url": ""
+        },
+        {
+          "id": "ca_mall",
+          "name": "长安商城",
+          "url": "http://120.76.100.239/caecapptest/main/index.html"
+        },
+        {
+          "id": "4s_info",
+          "name": "经销商",
+          "url": "dealer/index.html"
+        },
+        {
+          "id": "user_feedback",
+          "name": "意见反馈",
+          "url": "my/feedback.html"
+        },
+        {
+          "id": "custom_evaluate",
+          "name": "客户点评",
+          "url": "customEvaluate/index.html"
+        },
+        {
+          "id": "dial_rescue",
+          "name": "道路救援",
+          "url": ""
+        },
+        {
+          "id": "car_parts",
+          "name": "原厂配件",
+          "url": "server/accessories.html"
+        },
+        {
+          "id": "recommend_car",
+          "name": "推荐购车",
+          "url": "legalize/recommend-share.html"
+        },
+        {
+          "id": "ca_yundian",
+          "name": "长安云店",
+          "url": "http://e.changan.com.cn/yundian/index_wap.html"
+        }
+      ]
+    }
+  ]
+}

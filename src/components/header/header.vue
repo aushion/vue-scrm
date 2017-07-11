@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <span class="icon icon-arrow-left-2" @click="goBack()"></span>
+    <span class="icon icon-arrow-left-2" @click="goBack"></span>
     <h1>{{title}}</h1>
   </div>
 </template>
@@ -11,7 +11,7 @@
     props: ['title'],
     methods: {
       goBack: function () {
-        router.go(-1)
+        router.goBack()
       }
     }
   }
