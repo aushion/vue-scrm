@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="border-1px">
+  <div id="footer">
     <div class="footer-wrapper">
       <div class="footer-item">
         <router-link to="/home">
@@ -9,7 +9,7 @@
 
       </div>
       <div class="footer-item">
-        <router-link to="/server">
+        <router-link to="/server" >
           <div class="icon icon-server"></div>
           服务
         </router-link>
@@ -33,6 +33,8 @@
     name: 'footer',
     data () {
       return {}
+    },
+    methods: {
     }
   }
 </script>
@@ -45,7 +47,6 @@
     font-size: 14px
     color: #999
     z-index: 999
-    border-1px(#ccc)
     .footer-wrapper
       display flex
       height: 100%

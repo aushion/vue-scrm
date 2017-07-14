@@ -11,20 +11,13 @@
       </div>
       <!--管理应用-->
       <div class="nav">
-        <ul class="apply-wrapper">
-          <li class="apply-item" v-for="(item,index) in applyIcons" :key="index">
-            <router-link v-bind:to="item.url">
-            <div class="apply-icon"><img :src="item.icon"></div>
-            {{item.name}}
-            </router-link>
-          </li>
-          <li class="apply-item">
-            <router-link to="/appManage">
-            <div class="apply-icon"><img src="../home/imgs/more.png" ></div>
-            更多
-            </router-link>
-          </li>
-        </ul>
+        <v-apply appList="appList"></v-apply>
+        <!--<li class="apply-item">-->
+        <!--<router-link to="/appManage">-->
+        <!--<div class="apply-icon"><img src="../home/imgs/more.png" ></div>-->
+        <!--更多-->
+        <!--</router-link>-->
+        <!--</li>-->
       </div>
       <!--认证车主-->
       <div class="redirect-img">
@@ -52,29 +45,31 @@
   require('vue-swipe/dist/vue-swipe.css')
   import {Swipe, SwipeItem} from 'vue-swipe'
   import footer from '../footer/footer'
+  import apply from '../apply/apply.vue'
   const ERR_NO = 0
   export default {
     name: 'home',
-    props: {},
     data () {
       return {
-        applyIcons: [],
+        appList: {},
         slides: [{imgSrc: 'http://tse4.mm.bing.net/th?id=OIP.hXmJuA3sKzIH8xZue81frAEsC7&pid=15.1'},
           {imgSrc: 'http://pic1.win4000.com/wallpaper/a/544725ba1dc70.jpg'},
           {imgSrc: 'http://tse1.mm.bing.net/th?id=OIP.EaffCH2CjS6xY25u8sjBkwEsCo&pid=15.1'}]
       }
     },
     created () {
-      this.$http.get('api/applyData').then((response) => {
+      this.$http.get('./api/applyData').then((response) => {
         if (response.data.errno === ERR_NO) {
-          this.applyIcons = response.data.data
+          console.log(response.data)
+          this.appList = response.data.data.choosedApp
         }
       })
     },
     components: {
       'v-footer': footer,
       'swipe': Swipe,
-      'swipe-item': SwipeItem
+      'swipe-item': SwipeItem,
+      'v-apply': apply
     }
   }
 
@@ -87,33 +82,40 @@
     background-color: #f2f2f2
     img
       width: 100%
-    .swiper-box
+    .home-footer
+      position: fixed
       width: 100%
-      height: 144px;
-    .nav
-      width: 100%
-      height: 180px
-      .apply-wrapper
+      z-index: 50
+      left: 0
+      bottom: 0
+    .wrapper
+      .swiper-box
+        width: 100%
+        height: 144px;
+      .nav
+        width: 100%
+        height: 180px
+        .apply-wrapper
+          display flex
+          flex-wrap wrap
+          font-size: 12px
+          .apply-item
+            flex 0 1 20%
+            width: 20%
+            .apply-icon
+              padding: 10px
+      .redirect-img
+        width: 100%
+        padding: 10px 0;
+      .comm-img
+        padding: 0 10px;
         display flex
         flex-wrap wrap
-        font-size: 12px
-        .apply-item
-          flex 0 1 20%
-          width: 20%
-          .apply-icon
-            padding: 10px
-    .redirect-img
-      width: 100%
-      padding: 10px 0;
-    .comm-img
-      padding: 0 10px;
-      display flex
-      flex-wrap wrap
-      justify-content space-between
-      .comm-down
-        flex: 0 1 49%;
-        width 49%
-      .comm-up
-        flex 0 1 33%
-        width 33%
+        justify-content space-between
+        .comm-down
+          flex: 0 1 49%;
+          width 49%
+        .comm-up
+          flex 0 1 33%
+          width 33%
 </style>

@@ -17,6 +17,7 @@
 </script>
 
 <style lang="stylus">
+  @import '../../commom/css/mixin.styl'
   #my
     width: 100%
     height: 100%

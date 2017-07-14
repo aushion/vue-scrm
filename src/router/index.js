@@ -11,8 +11,9 @@ Router.prototype.goBack = function () {
   this.isBack = true
   this.go(-1)
 }
-Router.prototype.tab = function () {
+Router.prototype.tab = function (m) {
   this.isChange = true
+  this.push(m)
 }
 Vue.use(Router)
 

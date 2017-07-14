@@ -14,14 +14,18 @@
         transitionName: 'slide-right'
       }
     },
+    methods: {},
     watch: {
       '$route' (to, from) {
         let isBack = this.$router.isBack;  //  监听路由变化时的状态为前进还是后退
-        let change = this.$router.isChange;
         if (isBack) {
           this.transitionName = 'slide-right'
         } else {
-          this.transitionName = 'slide-left'
+          if (to.path === '/home' || to.path === '/server' || to.path === '/my') {
+            this.transitionName = 'fade'
+          } else {
+            this.transitionName = 'slide-left'
+          }
         }
         this.$router.isBack = false
       }
@@ -41,13 +45,16 @@
       position: absolute
       width: 100%
       transition: all .4s ease;
+     .fade-enter,
+     .fade-leave-active{
+       opacity: 0
+     }
     .slide-left-enter,
     .slide-right-leave-active {
       opacity: 0;
       -webkit-transform: translate(100%, 0);
       transform: translate(100%, 0);
     }
-
     .slide-left-leave-active,
     .slide-right-enter {
       opacity: 0;
