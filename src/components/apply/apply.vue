@@ -1,8 +1,8 @@
 <template>
   <div class="apply">
     <ul class="apply-wrapper">
-      <li v-for="item in appList" class="-item  border-1px">
-        <div class="status" :class="statusClass"></div>
+      <li v-for="item in getData" class="apply-item  border-1px">
+        <div class="status" :class="showClass"></div>
         <div class="apply-icon"><img :src="item.icon"></div>
         {{item.name}}
       </li>
@@ -13,23 +13,24 @@
 <script>
   export default {
     props: {
-      appList: {
+      applyList: {
         type: Object
       }
     },
-    data () {
-      return {
-        statusClass: ''
-      }
-    },
-
-    created () {
-      if (this.appList.type === 'home') {
-        this.statusClass = ''
-      } else if (this.appList.type === 'operable') {
-        this.statusClass = 'del'
-      } else {
-        this.statusClass = 'choosed'
+    computed: {
+      getData () {
+        return this.applyList.data;
+      },
+      showClass () {
+        let statusClass
+        if (this.applyList.type === 'home') {
+          statusClass = ''
+        } else if (this.applyList.type === 'operable') {
+          statusClass = 'del'
+        } else {
+          statusClass = 'choosed'
+        }
+        return statusClass
       }
     }
   }

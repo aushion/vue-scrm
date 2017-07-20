@@ -11,13 +11,15 @@
       </div>
       <!--管理应用-->
       <div class="nav">
-        <v-apply appList="appList"></v-apply>
-        <!--<li class="apply-item">-->
-        <!--<router-link to="/appManage">-->
-        <!--<div class="apply-icon"><img src="../home/imgs/more.png" ></div>-->
-        <!--更多-->
-        <!--</router-link>-->
-        <!--</li>-->
+        <v-apply :applyList="appList">
+          <li class="apply-item">
+            <router-link to="/appManage">
+              <div class="apply-icon"><img src="../home/imgs/more.png" ></div>
+              更多
+            </router-link>
+          </li>
+        </v-apply>
+
       </div>
       <!--认证车主-->
       <div class="redirect-img">
@@ -60,8 +62,8 @@
     created () {
       this.$http.get('./api/applyData').then((response) => {
         if (response.data.errno === ERR_NO) {
-          console.log(response.data)
           this.appList = response.data.data.choosedApp
+          console.log(this.appList)
         }
       })
     },
