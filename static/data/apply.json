@@ -7,7 +7,7 @@
         {
           "id": "driver_order",
           "name": "试乘试驾",
-          "url": "dealer/driver-order.html",
+          "url": "",
           "icon": "../../static/imgs/icon/driver_order.png"
         },
         {
@@ -19,25 +19,25 @@
         {
           "id": "ca_mall",
           "name": "长安商城",
-          "url": "http://cloud.mall.changan.com.cn/caecapptest/main/index.html?biz=9",
+          "url": "",
           "icon": "../../static/imgs/icon/ca_mall.png"
         },
         {
           "id": "4s_info",
           "name": "经销商",
-          "url": "dealer/index.html",
+          "url": "",
           "icon": "../../static/imgs/icon/4s_info.png"
         },
         {
           "id": "user_feedback",
           "name": "意见反馈",
-          "url": "my/feedback.html",
+          "url": "",
           "icon": "../../static/imgs/icon/user_feedback.png"
         },
         {
           "id": "custom_evaluate",
           "name": "客户点评",
-          "url": "customEvaluate/index.html",
+          "url": "",
           "icon": "../../static/imgs/icon/custom_evaluate.png"
         },
         {
@@ -49,24 +49,30 @@
         {
           "id": "car_parts",
           "name": "原厂配件",
-          "url": "server/accessories.html",
+          "url": "/parts",
           "icon": "../../static/imgs/icon/car_parts.png"
         },
         {
           "id": "recommend_car",
           "name": "推荐购车",
-          "url": "legalize/recommend-share.html",
+          "url": "",
           "icon": "../../static/imgs/icon/recommend_car.png"
+        },
+        {
+          "id": "add_app",
+          "name": "管理应用",
+          "url": "/appManage",
+          "icon": "../../static/imgs/icon/more.png"
         }
       ]
     },
-    "operalbe": {
+    "operable": {
       "type": "operable",
       "data": [
         {
           "id": "driver_order",
           "name": "试乘试驾",
-          "url": "dealer/driver-order.html",
+          "url": "",
           "icon": "../../static/imgs/icon/driver_order.png"
         },
         {
@@ -78,25 +84,25 @@
         {
           "id": "ca_mall",
           "name": "长安商城",
-          "url": "http://cloud.mall.changan.com.cn/caecapptest/main/index.html?biz=9",
+          "url": "",
           "icon": "../../static/imgs/icon/ca_mall.png"
         },
         {
           "id": "4s_info",
           "name": "经销商",
-          "url": "dealer/index.html",
+          "url": "",
           "icon": "../../static/imgs/icon/4s_info.png"
         },
         {
           "id": "user_feedback",
           "name": "意见反馈",
-          "url": "my/feedback.html",
+          "url": "",
           "icon": "../../static/imgs/icon/user_feedback.png"
         },
         {
           "id": "custom_evaluate",
           "name": "客户点评",
-          "url": "customEvaluate/index.html",
+          "url": "",
           "icon": "../../static/imgs/icon/custom_evaluate.png"
         },
         {
@@ -108,13 +114,13 @@
         {
           "id": "car_parts",
           "name": "原厂配件",
-          "url": "server/accessories.html",
+          "url": "/parts",
           "icon": "../../static/imgs/icon/car_parts.png"
         },
         {
           "id": "recommend_car",
           "name": "推荐购车",
-          "url": "legalize/recommend-share.html",
+          "url": "",
           "icon": "../../static/imgs/icon/recommend_car.png"
         }
       ]
@@ -149,7 +155,7 @@
         {
           "id": "user_feedback",
           "name": "意见反馈",
-          "url": "my/feedback.html",
+          "url": "",
           "icon": "../../static/imgs/icon/user_feedback.png"
         },
         {
@@ -181,6 +187,12 @@
           "name": "默认",
           "url": "",
           "icon": "../../static/imgs/icon/default.png"
+        },
+        {
+          "id": "ca_yundian",
+          "name": "长安云店",
+          "url": "",
+          "icon": "../../static/imgs/icon/ca_yundian.png"
         }
       ]
     }
