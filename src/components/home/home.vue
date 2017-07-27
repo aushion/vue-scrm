@@ -14,7 +14,7 @@
         <v-apply :applyList="appList">
           <li class="apply-item">
             <router-link to="/appManage">
-              <div class="apply-icon"><img src="../home/imgs/more.png" ></div>
+              <div class="apply-icon"><img src="../home/imgs/more.png"></div>
               更多
             </router-link>
           </li>
@@ -60,12 +60,15 @@
       }
     },
     created () {
+      let a = window.localStorage.getItem('myAppArr')
       this.$http.get('./api/applyData').then((response) => {
         if (response.data.errno === ERR_NO) {
           this.appList = response.data.data.choosedApp
-          console.log(this.appList)
+          a ? this.appList.data = JSON.parse(a).concat(this.appList.data.pop()) : this.appList
         }
       })
+    },
+    mounted () {
     },
     components: {
       'v-footer': footer,
@@ -96,7 +99,6 @@
         height: 144px;
       .nav
         width: 100%
-        height: 180px
         .apply-wrapper
           display flex
           flex-wrap wrap

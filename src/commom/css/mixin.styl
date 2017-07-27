@@ -9,7 +9,7 @@ border-1px($color)
     height: 1px
     border-top: 1px solid $color
     content: ' '
-border-r($color)
+border-round($color)
   position: relative
   &:after
     display: block
@@ -19,6 +19,7 @@ border-r($color)
     height: 100%
     width: 1px
     border-right: 1px solid $color
+    border-bottom: 1px solid $color
     content: ' '
 bg-image($url)
   background-image: url($url)

@@ -1,10 +1,12 @@
 <template>
   <div class="apply">
     <ul class="apply-wrapper">
-      <li v-for="item in getData" class="apply-item  border-1px">
+      <li v-for="(item,index) in getData" class="apply-item" :class="showBorder" v-on:click="handle(index)">
         <div class="status" :class="showClass"></div>
         <div class="apply-icon"><img :src="item.icon"></div>
         {{item.name}}
+        <router-link :to="item.url" v-show="applyList.type === 'home'">
+        </router-link>
       </li>
     </ul>
   </div>
@@ -31,6 +33,23 @@
           statusClass = 'choosed'
         }
         return statusClass
+      },
+      showBorder () {
+        let type = this.applyList.type
+        let borderClass
+        if (type === 'operable' || type === 'allApps') {
+          borderClass = 'border-round'
+        }
+        return borderClass
+      }
+    },
+    methods: {
+      handle (i) {
+        if (this.applyList.type === 'operable') {
+          this.$emit('del', i)
+        } else if (this.applyList.type === 'allApps') {
+          this.$emit('add', i)
+        }
       }
     }
   }
@@ -44,19 +63,36 @@
     font-size: 12px
     .apply-item
       position: relative
-      flex 0 1 20%
+      box-sizing border-box
+      flex 0 1 auto
       width: 20%
+      &.border-round
+        border-bottom: 1px solid #ccc
+        border-right: 1px solid #eee
       .apply-icon
         padding: 10px
       .status
         position: absolute
         top: 5px
-        right: 4px
+        right: 0
         width: 15px
+        height: 15px
         &.del
           bg-image('del.png')
+          background-size: 100%
+          background-repeat no-repeat
         &.add
           bg-image('add.png')
+          background-size: 100%
+          background-repeat no-repeat
         &.choosed
           bg-image('choosed.png')
+          background-size: 100%
+          background-repeat no-repeat
+      a
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%;
+        height: 100%
 </style>
