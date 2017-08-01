@@ -173,7 +173,7 @@
         {
           "id": "car_parts",
           "name": "原厂配件",
-          "url": "server/accessories.html",
+          "url": "/parts",
           "icon": "../../static/imgs/icon/car_parts.png"
         },
         {
